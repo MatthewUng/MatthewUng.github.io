@@ -125,10 +125,10 @@ void main() {
 The above code sample details the boiler plate to utilize External Polymorphism.  
 As before, we have three animal classes. Instead of having them derive from the `Animal` interface, 
 we wrap each of them into adapters that do inherit from the desired public interface: 
-`AnimalAdapter<Cow>`, `AnimalAdatper<Dog>`, and `AnimalAdapter<Cat>`.
+`AnimalAdapter<Cow>`, `AnimalAdapter<Dog>`, and `AnimalAdapter<Cat>`.
 
 The `AnimalAdapter::noise()` method defers to the `make_noise` method in the global namespace.
-The templatizied `makes_noise` method defers to each individual animal's `noise()` method.  
+The templatized `makes_noise` method defers to each individual animal's `noise()` method.  
 
 All together, we are able to still leverage polymorphism without having the base classes 
 inherit from a common base class.
